@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: simple-web
-          image: localhost:5001/simple-web:0.01
+          image: localhost:5001/simple-web:$(shell git log --format="%h" -n 1)
           ports:
             - containerPort: 8000
 
