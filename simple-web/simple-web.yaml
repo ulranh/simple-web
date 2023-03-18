@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: simple-web
-          image: localhost:5001/simple-web:ea0659b
+          image: localhost:5001/simple-web:a532204
           ports:
             - containerPort: 8000
 
