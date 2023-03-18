@@ -8,32 +8,6 @@ build:
 	go build
 .PHONY: build
 
-client:
-	npm --prefix ./client install
-	npm --prefix ./client run build
-.PHONY: client
-
-generate-build:
-	go generate cmd/assets.go
-	go build
-.PHONY: generate-build
-
-docker-build:
-	docker build --build-arg PORT=${PORT} -t simple-web:$(GIT_HASH) .
-.PHONY: docker-build
-
-docker-run:
-	docker run -d --name=saphistory -p $(PORT):${PORT} -v $(DBSTORE):/app/badger saphistory:$(VERSION)
-.PHONY: docker-run
-
-docker-tag-version:
-	docker tag saphistory:$(VERSION) $(DOCKER_REPO)/saphistory:$(VERSION)
-.PHONY: docker-tag-version
-
-docker-push-version:
-	docker push  $(DOCKER_REPO)/saphistory:$(VERSION)
-.PHONY: docker-push-version
-
 docker:
 	docker build --build-arg PORT=${PORT} -t simple-web:$(GIT_HASH) .
 	docker tag simple-web:$(GIT_HASH) $(DOCKER_REPO)/simple-web:$(GIT_HASH)

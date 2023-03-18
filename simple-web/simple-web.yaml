@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: simple-web
-          image: localhost:5001/simple-web:3d1187d
+          image: localhost:5001/simple-web:ea0659b
           ports:
             - containerPort: 8000
 
@@ -29,8 +29,22 @@ spec:
   ports:
     - port: 8000
       targetPort: 8000
+      nodePort: 30000
   selector:
     app: simple-web
+    type: NodePort
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: simple-web
+# spec:
+#   type: ClusterIP
+#   ports:
+#     - port: 8000
+#       targetPort: 8000
+#   selector:
+#     app: simple-web
 
 ---
 
