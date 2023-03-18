@@ -13,7 +13,7 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "package main #14")
+	fmt.Fprintf(w, "ulli 1")
 }
 
 func loggingMiddleware(next http.Handler) http.Handler {
