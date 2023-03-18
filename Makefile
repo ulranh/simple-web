@@ -38,4 +38,5 @@ docker:
 	docker build --build-arg PORT=${PORT} -t simple-web:$(GIT_HASH) .
 	docker tag simple-web:$(GIT_HASH) $(DOCKER_REPO)/simple-web:$(GIT_HASH)
 	docker push  $(DOCKER_REPO)/simple-web:$(GIT_HASH)
+	sed -i 's/simple-web:.*/simple-web:${GIT_HASH}/' ./simple-web/simple-web.yaml
 .PHONY: docker
