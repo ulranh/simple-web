@@ -18,4 +18,4 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o sw
 FROM scratch
 COPY --from=builder /app/sw /app/
 EXPOSE 8000
-ENTRYPOINT ["/app/simple-web"]
+ENTRYPOINT ["/app/sw"]
