@@ -29,22 +29,8 @@ spec:
   ports:
     - port: 8000
       targetPort: 8000
-      nodePort: 30000
   selector:
     app: simple-web
-    type: NodePort
-
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: simple-web
-# spec:
-#   type: ClusterIP
-#   ports:
-#     - port: 8000
-#       targetPort: 8000
-#   selector:
-#     app: simple-web
 
 ---
 
