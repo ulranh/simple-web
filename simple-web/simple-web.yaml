@@ -16,7 +16,7 @@ spec:
         - name: simple-web
           image: localhost:5001/simple-web:0.01
           ports:
-            - containerPort: 80
+            - containerPort: 8000
 
 ---
 
@@ -28,7 +28,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 8000
-      targetPort: 80
+      targetPort: 8000
   selector:
     app: simple-web
 
