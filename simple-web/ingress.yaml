@@ -12,13 +12,13 @@ spec:
     http:
       paths:
       # - pathType: Prefix
-      - pathType: Exact
+      - pathType: Prefix
         path: /
         backend:
           service:
             name: simple-web
             port:
-              number: 80
+              number: 8000
   tls: # < placing a host in the TLS config will determine what ends up in the cert's subjectAltNames
   - hosts:
     - simple-web.localdomain
