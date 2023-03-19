@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     # add an annotation indicating the issuer to use.
-    cert-manager.io/cluster-issuer: nameOfClusterIssuer
+    cert-manager.io/cluster-issuer: ca-issuer
   name: simple-web
   namespace: default
 spec:
