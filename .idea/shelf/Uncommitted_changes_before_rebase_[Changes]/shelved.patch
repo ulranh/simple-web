@@ -1,0 +1,13 @@
+Index: readme.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># test\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/readme.md b/readme.md
+--- a/readme.md	(revision 2dca028170fa6637d3cde574c200bdb59387331b)
++++ b/readme.md	(date 1681472216411)
+@@ -1,1 +1,1 @@
+-# test
++# Small ArgoCD Test
