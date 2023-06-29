@@ -14,3 +14,5 @@ docker:
 	docker push  $(DOCKER_REPO)/simple-web:$(GIT_HASH)
 	sed -i 's/simple-web:.*/simple-web:${GIT_HASH}/' ./simple-web/simple-web.yaml
 .PHONY: docker
+
+VERSION=v0.0.1 make release
