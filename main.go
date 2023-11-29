@@ -16,6 +16,9 @@ func main() {
 func handler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "ulli 1415")
 }
+func runHandler(w http.ResponseWriter, req *http.Request) {
+	fmt.Fprintf(w, "RRUUNN")
+}
 
 func stopHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "STOP!")
